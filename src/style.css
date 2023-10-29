@@ -1,18 +1,32 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap');
+:root {
+  --red-primary: #B22222;
+  --bg-white : #FFFFFF;  
+  --text-white-color : #FFFFFF;
+  --red-secondary :#3c0808;
+}
+
+html,body{
+font-family: 'roboto',Sans-Serif;
  margin: 0; 
  padding: 0;
+ overflow-x: hidden;
+ overflow-y: hidden;
  align-items: center;
  justify-content: center;
  text-align: center;
- background: #37350eb8;
+ background: var(--bg-white);
 }
 nav{
+  overflow: hidden;
+  color: var(--text-white-color);
   font-size: 1.5rem;
   justify-content: space-between;
   display: flex;
   padding: 0 35px;
-  background:#37350e1c ;
+  background:var(--red-primary);
   align-items: center;
+  border: 6px solid black;
 }
 li{
   text-decoration: none;
@@ -22,27 +36,16 @@ li{
   position: relative;
 }
 li a{
+  color: var(--text-white-color);
   text-decoration: none;
-  color: black;
   z-index: 88;
 }
 li a:hover{
-  color: #b1aa0eb8;
+  color: var(--red-secondary);
   
 }
-li a::before{
-  content: "";
-  border-radius: 7px;
-  position: absolute;
-  top: -36px;
-  z-index: -1;
-  right: -15px;
-  background: #b1aa0eb8;
-  width:130%;
-  height: 100px;
-}
-li a::after:hover{
-  scale: 2;
+nav{
+  border: 1px solid black;
 }
 .nav-a{
   margin: 0 27px;
@@ -50,9 +53,200 @@ li a::after:hover{
 .nav-logo h1{
   justify-content: ;
 }
+.nav-icon{
+  position: relative;
+  margin-right: 20px;
+}
+.nav-icon li{
+  margin:0 4px;
+  color: var(--text-white-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.nav-icon li:hover{
+  color: var(--red-secondary);
+}
+.menu{
+  display: none;
+}
+.search-parrent1{
+  margin: 15px 0;
+  justify-content: center;
+  display: flex;
+}
+.search-parrent2{
+  justify-content: center;
+  border-radius: 6px;
+  display: flex;
+  border: 1.5px solid var(--red-secondary); 
+  width: 850px;
+  height: 40px;
+  
+}
+.searchInput{
+  margin: 0 10px;
+  font-size: 1.4rem;
+  width: 800px;
+  border: none;
+}
+.search-parrent2 a{
+  position: relative;
+  display:flex;
+  top: 6px;
+}
+.search-icon2{
+  position: relative;
+  top: 5px;
+  margin: 0 7px;
+}
+.searchInput:focus {
+  outline: none; 
+  border: none; 
+}
+.close-icon1{
+  display: none;
+  position: relative;
+  right: 5px;
+}
+.closeMenu{
+  display: none;
+}
+
+.wrapper-deskription{
+  font-size: 1rem;
+  width: 730px;
+  height: 200px;
+  text-align: left;
+  
+}
+.wrapper-deskription .content{
+  margin: 20px 10px;
+}
+.wrapper-jumbotron{
+  border: 1px solid black;
+  height: 300px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+}
+.jumbotron{
+  margin: 0 50px;
+  height: 300px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 .jumbotron img{
- background-size: cover;
- position:relative;
- top: -100px;
- z-index: -9;
+  width: 200px;
+}
+.wrapper-deskription .btn{
+  background: var(--red-primary);
+  border-radius: 4px;
+  border: none;
+  color: var(--text-white-color);
+  height: 30px;
+  font-size: 0.8rem;
+  width:100px ;
+}
+head{
+  border: 1px solid black;
+}
+ /* Gaya CSS untuk tablet */
+@media (max-width: 1024px) {
+  html,body{
+    font-size: 70%;
+  }
+}
+  /* Gaya CSS untuk ponsel */
+@media (max-width: 767px) {
+   html,body{
+     overflow-y: hidden;
+     overflow-x: hidden;
+    font-size: 55%;
+  }
+  
+  .search-parrent2{
+    width: 80%;
+    height: 100%;
+  }
+  .x{
+    height: 50px;
+    width: 20px;
+  }
+   .nav-link{
+  border: 1px solid black;
+  
+  }
+  .menu{
+    display: block;
+  }
+  .nav-com{
+   position: absolute;
+    z-index: 99;
+    right: -100%;
+   text-align: left;
+   background: var(--red-primary);
+   width: 50px;
+   top: -1000px;
+   height: 100vh;
+   transition: 0.2s ease-out;
+  }
+  .nav-com.active {
+    right: 0;
+    top: 40px;
+  }
+  .nav-a {
+    margin-bottom: 20px;
+    top:50px;
+  }
+  .nav-icon li  {
+    margin: 0 0px;
+  }
+  .nav-icon{
+    margin-right: -10%;
+  }
+  .search-icon2{
+ top: 1px;
+}
+.wrapper-deskription{
+  font-size: 0.5rem;
+  width: 250px;
+  height: 150px;
+  text-align: left;
+  
+}
+.wrapper-deskription .content{
+  margin: 10px 10px;
+}
+.wrapper-jumbotron{
+  border: 1px solid black;
+  height: 240px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+}
+.jumbotron{
+  margin: 0 25px;
+  height: 200px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.jumbotron img{
+  width: 100px;
+}
+.wrapper-deskription .btn{
+ 
+  border-radius: 2px;
+  border: none;
+  height: 20px;
+  font-size: 0.4rem;
+  width:80px ;
+}
 }

@@ -1,3 +1,3 @@
-
-  var p = document.querySelector(".a")
-  console.log(p.style)
+window.addEventListener('scroll', function() {
+        window.scrollTo(0, window.scrollY);
+    });
