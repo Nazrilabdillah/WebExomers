@@ -50,9 +50,7 @@ nav{
 .nav-a{
   margin: 0 27px;
 }
-.nav-logo h1{
-  justify-content: ;
-}
+
 .nav-icon{
   position: relative;
   margin-right: 20px;
@@ -114,7 +112,7 @@ nav{
 
 .wrapper-deskription{
   font-size: 1rem;
-  width: 730px;
+  width: 900px;
   height: 200px;
   text-align: left;
   
@@ -123,8 +121,7 @@ nav{
   margin: 20px 10px;
 }
 .wrapper-jumbotron{
-  border: 1px solid black;
-  height: 300px;
+  height: 400px;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -141,6 +138,8 @@ nav{
 
 .jumbotron img{
   width: 200px;
+  margin-left: 70px;
+
 }
 .wrapper-deskription .btn{
   background: var(--red-primary);
@@ -151,8 +150,12 @@ nav{
   font-size: 0.8rem;
   width:100px ;
 }
-head{
-  border: 1px solid black;
+
+.wrapper-produk{
+  background: var(--red-primary);
+}
+.wrapper-produk li{
+  color: var(--text-white-color);
 }
  /* Gaya CSS untuk tablet */
 @media (max-width: 1024px) {
@@ -189,10 +192,15 @@ head{
     right: -100%;
    text-align: left;
    background: var(--red-primary);
-   width: 50px;
-   top: -1000px;
+   width: 25vh;
    height: 100vh;
    transition: 0.2s ease-out;
+  }
+  .add{
+    display: block;
+  }
+  .remove{
+    display: none;
   }
   .nav-com.active {
     right: 0;
@@ -212,8 +220,7 @@ head{
  top: 1px;
 }
 .wrapper-deskription{
-  font-size: 0.5rem;
-  width: 250px;
+  width: 350px;
   height: 150px;
   text-align: left;
   
@@ -223,7 +230,7 @@ head{
 }
 .wrapper-jumbotron{
   border: 1px solid black;
-  height: 240px;
+  height: 300px;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -246,7 +253,7 @@ head{
   border-radius: 2px;
   border: none;
   height: 20px;
-  font-size: 0.4rem;
+
   width:80px ;
 }
 }

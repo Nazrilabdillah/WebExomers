@@ -6,12 +6,12 @@ function toggleMenu(value){
   value == "open"? openNavbarMenu():closeNavbarMenu()
 }
 function openNavbarMenu(){
-  navbarMenu.style.display ="none"
-  navbarClose.style.display ="block"
+  navbarMenu.classList.add("remove")
+  navbarClose.classList.add("add")
   nav.classList.add("active")
 }
 function closeNavbarMenu(){
   nav.classList.remove("active")
-  navbarMenu.style.display ="block"
-  navbarClose.style.display ="none"
+  navbarMenu.classList.remove("remove")
+  navbarClose.classList.remove("add")
 }
