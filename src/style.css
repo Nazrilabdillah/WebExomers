@@ -11,7 +11,6 @@ font-family: 'roboto',Sans-Serif;
  margin: 0; 
  padding: 0;
  overflow-x: hidden;
- overflow-y: hidden;
  align-items: center;
  justify-content: center;
  text-align: center;
@@ -151,10 +150,15 @@ nav{
   width:100px ;
 }
 
-.wrapper-produk{
-  background: var(--red-primary);
+.cart-populer-produk .cart{
+  display: flex;
+}
+.cart-populer-produk .cart img{
+  width: 100px;
 }
 .wrapper-produk li{
+  width: 100%;
+  background: var(--red-primary);
   color: var(--text-white-color);
 }
  /* Gaya CSS untuk tablet */

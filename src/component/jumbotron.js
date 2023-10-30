@@ -2,7 +2,6 @@ const categoryJumbtron = ""
 const jumbotron = document.querySelector(".wrapper-jumbotron")
 async function mapDataProduk(){
   const dataProduk = await FetchData(categoryJumbtron)
-  console.log(dataProduk)
   dataProduk.map((produk,key)=>{
     jumbotron.innerHTML +=`<div class="jumbotron">
     <li class="wrapper-deskription">
@@ -14,7 +13,6 @@ async function mapDataProduk(){
     <img src=${produk.image} alt="">
     </div>
     `
-    console.log(produk.title)
   })
 }
 mapDataProduk()
