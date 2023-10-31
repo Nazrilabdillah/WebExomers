@@ -2,6 +2,7 @@
 :root {
   --red-primary: #B22222;
   --bg-white : #FFFFFF;  
+  --shadow-black :#00000015;
   --text-white-color : #FFFFFF;
   --red-secondary :#3c0808;
 }
@@ -158,10 +159,15 @@ nav{
 .cart-populer-produk .cart{
   display: flex-coloum;
   width: 300px;
-  border: 2px solid var(--red-secondary);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cart-populer-produk .cart:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .cart-populer-produk .cart img{
-  width: 300px;
+  width: 250px;
+
+  margin: 20px 30px;
 }
 .wrapper-produk li:nth-child(1){
   width: 100%;
