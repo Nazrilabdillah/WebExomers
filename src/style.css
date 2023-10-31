@@ -5,6 +5,7 @@
   --shadow-black :#00000015;
   --text-white-color : #FFFFFF;
   --red-secondary :#3c0808;
+  --abu-abu:#333333;
 }
 
 html,body{
@@ -183,7 +184,52 @@ nav{
 .wrapper-produk li h3{
   font-size: 1.5rem;
 }
+.cart-random-produk{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 20px;
+  margin: 0 30px;
+}
+.cart-random-produk .cart{
+  display: flex-coloum;
+  width: 300px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cart-random-produk .cart:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.cart-random-produk .cart img{
+  width: 250px;
 
+  margin: 20px 30px;
+}
+.wrapper-produk li:nth-child(1){
+  width: 100%;
+  background: var(--red-primary);
+  color: var(--text-white-color);
+}
+.wrapper-produk li:nth-child(2){
+  width: 100%;
+  justify-content: end;
+  text-align: left;
+  margin: 0 30px;
+}
+.wrapper-produk li h3{
+  font-size: 1.5rem;
+}
+.wrapper-produk{
+  margin-bottom: 40px;
+}
+.footer{
+  background-color: var(--abu-abu);
+  color: var(--text-white-color);
+}
+.wrapper-footer{
+  padding: 40px 0;
+}
+.footer-contact-icon li{
+  color: var(--text-white-color);
+}
  /* Gaya CSS untuk tablet */
 @media (max-width: 1024px) {
   html,body{
@@ -193,7 +239,6 @@ nav{
   /* Gaya CSS untuk ponsel */
 @media (max-width: 767px) {
    html,body{
-     overflow-y: hidden;
      overflow-x: hidden;
     font-size: 55%;
   }
